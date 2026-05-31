@@ -1,0 +1,390 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+.header{
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    color:#0072ce;
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.search input{
+    width:420px;
+    padding:12px 20px;
+    border-radius:30px;
+    border:1px solid #d7d7d7;
+    outline:none;
+    background:#f9fbff;
+    transition:0.3s;
+}
+
+.search input:focus{
+    border-color:#0072ce;
+    box-shadow:0 0 10px rgba(0,114,206,0.25);
+}
+
+.menu a{
+    text-decoration:none;
+    margin-left:20px;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#0072ce;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#0072ce;
+    padding:16px;
+    text-align:center;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    margin:0 20px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#dbeeff;
+}
+
+/* BANNER */
+
+.banner{
+    margin:25px;
+    padding:50px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    border-radius:20px;
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:white;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.offer h2{
+    font-size:35px;
+}
+
+.offer p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+.offer button{
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background:#0072ce;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.offer button:hover{
+    background:#005ea6;
+}
+
+.coupon{
+    background:rgba(255,255,255,0.95);
+    color:#222;
+    padding:22px;
+    width:190px;
+    text-align:center;
+    border-radius:16px;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.coupon:hover{
+    transform:translateY(-8px);
+}
+
+/* SPORTS CATEGORY CARDS */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin:30px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    text-align:center;
+    width:180px;
+    border-radius:18px;
+    transition:0.3s;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,114,206,0.15);
+}
+
+.card img{
+    width:100%;
+    border-radius:12px;
+}
+
+.card h3{
+    margin-top:12px;
+}
+
+/* SLIDER (MANUAL SCROLL) */
+
+.slider{
+    width:100%;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding:20px;
+}
+
+.slider::-webkit-scrollbar{
+    height:8px;
+}
+
+.slider::-webkit-scrollbar-thumb{
+    background:#0072ce;
+    border-radius:10px;
+}
+
+.slide-track{
+    display:flex;
+    gap:20px;
+    width:max-content;
+}
+
+.slide{
+    min-width:300px;
+    height:350px;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.slide:hover{
+    transform:scale(1.03);
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* BIG IMAGE */
+
+.big{
+    padding:20px;
+}
+
+.big img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* MAIN TITLE */
+
+.main-title{
+    text-align:center;
+    margin:40px 0;
+    font-size:40px;
+    color:#0072ce;
+}
+
+/* CATEGORY BOX */
+
+.category-box{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:20px;
+}
+
+.item-box{
+    width:200px;
+    height:260px;
+    background:white;
+    text-align:center;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.item-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 25px rgba(0,114,206,0.2);
+}
+
+.item-box img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.item-box h2{
+    margin-top:18px;
+    font-size:22px;
+}
+
+/* PRODUCTS */
+
+.product-heading{
+    text-align:center;
+    margin:40px 0;
+    color:#0072ce;
+    font-size:35px;
+}
+
+.product-box{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.product-card{
+    width:220px;
+    background:white;
+    text-align:center;
+    border-radius:18px;
+    padding:18px;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 25px rgba(0,114,206,0.2);
+}
+
+.product-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.product-card h3{
+    margin-top:15px;
+}
+
+.product-card p{
+    color:#0072ce;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+/* LAST 4 IMAGE CARDS */
+
+.row-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:30px;
+}
+
+.block{
+    position:relative;
+    flex:1 1 240px;
+    height:350px;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.block:hover{
+    transform:translateY(-8px);
+}
+
+.block-text{
+    position:absolute;
+    top:20px;
+    left:20px;
+    right:20px;
+    z-index:2;
+}
+
+.block-text h3{
+    font-size:22px;
+    margin-bottom:10px;
+    font-weight:600;
+    color:black;
+}
+
+.block-text p{
+    font-size:24px;
+    font-weight:bold;
+    color:black;
+}
+
+.block-text span{
+    font-size:12px;
+    font-weight:normal;
+    color:black;
+}
+
+.block img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
+}
+
+.item-dark{
+    background:#ffffff;
+}
+
+.item-light{
+    background:#ffffff;
+}

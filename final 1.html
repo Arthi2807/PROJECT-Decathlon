@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decathlon UI</title>
+    <link rel="stylesheet" href="css Final1.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            DECATHLON
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Search for products">
+        </div>
+
+        <div class="menu">
+            <a href="#">Sign In</a>
+            <a href="#">Support</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Cart</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#">All Sports</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner" style="background-image:url('banner.jpg')">
+
+        <div class="offer">
+            <h2>Welcome Offer</h2>
+            <p>First Order Discount</p>
+            <button>Shop Now</button>
+        </div>
+
+        <div class="coupon">
+            <h2>₹100 OFF</h2>
+            <p>Above ₹1499</p>
+        </div>
+
+        <div class="coupon">
+            <h2>₹200 OFF</h2>
+            <p>Above ₹2499</p>
+        </div>
+
+        <div class="coupon">
+            <h2>₹300 OFF</h2>
+            <p>Above ₹3499</p>
+        </div>
+
+    </div>
+
+    <!-- Category Cards -->
+    <div class="cards">
+
+        <div class="card">
+            <img src="swimming.jpg">
+            <h3>Swimming</h3>
+        </div>
+
+        <div class="card">
+            <img src="gym and fitness.jpg">
+            <h3>Gym & Fitness</h3>
+        </div>
+
+        <div class="card">
+            <img src="cycling.jpg">
+            <h3>Cycling</h3>
+        </div>
+
+        <div class="card">
+            <img src="hiking.jpg">
+            <h3>Hiking</h3>
+        </div>
+
+        <div class="card">
+            <img src="activewear.jpg">
+            <h3>Activewear</h3>
+        </div>
+
+        <div class="card">
+            <img src="shoes.jpg">
+            <h3>Shoes</h3>
+        </div>
+
+        <div class="card">
+            <img src="sports accessories.jpg">
+            <h3>Sports Accessories</h3>
+        </div>
+
+    </div>
+
+    <!-- Slider -->
+    <div class="slider">
+        <div class="slide-track">
+
+            <div class="slide"><img src="SCROLL.png"></div>
+            <div class="slide"><img src="SCROLL 1.png"></div>
+            <div class="slide"><img src="SCROLL 2.png"></div>
+            <div class="slide"><img src="SCROLL 3.png"></div>
+            <div class="slide"><img src="SCROLL 4.png"></div>
+            <div class="slide"><img src="SCROLL 5.png"></div>
+
+        </div>
+    </div>
+
+    <!-- Big Banner -->
+    <div class="big">
+        <img src="big.png">
+    </div>
+
+    <!-- Categories -->
+    <h1 class="main-title">Shop By Categories</h1>
+
+    <div class="category-box">
+
+        <div class="item-box" onclick="showItems('T-Shirts')">
+            <img src="t shirt.png">
+            <h2>T-Shirts</h2>
+        </div>
+
+        <div class="item-box" onclick="showItems('Light Jacket')">
+            <img src="light.png">
+            <h2>Light Jacket</h2>
+        </div>
+
+        <div class="item-box" onclick="showItems('Cricket Gear')">
+            <img src="gear.png">
+            <h2>Cricket Gear</h2>
+        </div>
+
+        <div class="item-box" onclick="showItems('Pants')">
+            <img src="pant.png">
+            <h2>Pants</h2>
+        </div>
+
+        <div class="item-box" onclick="showItems('Socks')">
+            <img src="sock.png">
+            <h2>Socks</h2>
+        </div>
+
+        <div class="item-box" onclick="showItems('Running Shoes')">
+            <img src="shoe.png">
+            <h2>Running Shoes</h2>
+        </div>
+
+        <div class="item-box" onclick="showItems('Shorts')">
+            <img src="short.png">
+            <h2>Shorts</h2>
+        </div>
+
+        <div class="item-box" onclick="showItems('Towels')">
+            <img src="towel.png">
+            <h2>Towels</h2>
+        </div>
+
+    </div>
+
+    <div id="display-products"></div>
+
+    <script>
+
+function showItems(category){
+
+    let data = "";
+
+    if(category === "T-Shirts"){
+        data = `
+        <h1 class="product-heading">T-Shirts Collection</h1>
+        <div class="product-box">
+
+            <div class="product-card">
+                <img src="sports t shirt.png">
+                <h3>Sports T-Shirt</h3>
+                <p>₹425</p>
+            </div>
+
+            <div class="product-card">
+                <img src="t shirt 1.png">
+                <h3>Running T-Shirt</h3>
+                <p>₹689</p>
+            </div>
+
+            <div class="product-card">
+                <img src="t shirt 2.png">
+                <h3>Gym T-Shirt</h3>
+                <p>₹910</p>
+            </div>
+
+            <div class="product-card">
+                <img src="t shirt 3.png">
+                <h3>Cotton T-Shirt</h3>
+                <p>₹570</p>
+            </div>
+
+        </div>`;
+    }
+
+    else if(category === "Light Jacket"){
+        data = `
+        <h1 class="product-heading">Light Jackets</h1>
+
+        <div class="product-box">
+
+            <div class="product-card">
+                <img src="light 1.png">
+                <h3>Zip Jacket</h3>
+                <p>₹1345</p>
+            </div>
+
+            <div class="product-card">
+                <img src="light 2.png">
+                <h3>Winter Jacket</h3>
+                <p>₹1899</p>
+            </div>
+
+            <div class="product-card">
+                <img src="light 3.png">
+                <h3>Sports Jacket</h3>
+                <p>₹1520</p>
+            </div>
+
+            <div class="product-card">
+                <img src="light 4.png">
+                <h3>Casual Jacket</h3>
+                <p>₹1725</p>
+            </div>
+
+        </div>`;
+    }
+
+    else if(category === "Cricket Gear"){
+        data = `
+        <h1 class="product-heading">Cricket Gear</h1>
+
+        <div class="product-box">
+
+            <div class="product-card">
+                <img src="bat.png">
+                <h3>Cricket Bat</h3>
+                <p>₹2999</p>
+            </div>
+
+            <div class="product-card">
+                <img src="helmet.png">
+                <h3>Helmet</h3>
+                <p>₹1140</p>
+            </div>
+
+            <div class="product-card">
+                <img src="glove.png">
+                <h3>Batting Gloves</h3>
+                <p>₹865</p>
+            </div>
+
+            <div class="product-card">
+                <img src="ball.png">
+                <h3>Cricket Ball</h3>
+                <p>₹320</p>
+            </div>
+
+        </div>`;
+    }
+
+    else if(category === "Pants"){
+        data = `
+        <h1 class="product-heading">Pants Collection</h1>
+
+        <div class="product-box">
+
+            <div class="product-card">
+                <img src="pant 1.png">
+                <h3>Joggers</h3>
+                <p>₹940</p>
+            </div>
+
+            <div class="product-card">
+                <img src="pant 2.png">
+                <h3>Track Pant</h3>
+                <p>₹1200</p>
+            </div>
+
+            <div class="product-card">
+                <img src="pant 3.png">
+                <h3>Gym Pant</h3>
+                <p>₹885</p>
+            </div>
+
+            <div class="product-card">
+                <img src="pant 4.png">
+                <h3>Sports Pant</h3>
+                <p>₹1020</p>
+            </div>
+
+        </div>`;
+    }
+
+    else if(category === "Socks"){
+        data = `
+        <h1 class="product-heading">Socks Collection</h1>
+
+        <div class="product-box">
+
+            <div class="product-card">
+                <img src="sock 1.png">
+                <h3>Sports Socks</h3>
+                <p>₹240</p>
+            </div>
+
+            <div class="product-card">
+                <img src="sock 2.png">
+                <h3>Cotton Socks</h3>
+                <p>₹190</p>
+            </div>
+
+            <div class="product-card">
+                <img src="sock 3.png">
+                <h3>Running Socks</h3>
+                <p>₹335</p>
+            </div>
+
+            <div class="product-card">
+                <img src="sock 4.png">
+                <h3>Ankle Socks</h3>
+                <p>₹270</p>
+            </div>
+
+        </div>`;
+    }
+
+    else if(category === "Running Shoes"){
+        data = `
+        <h1 class="product-heading">Running Shoes</h1>
+
+        <div class="product-box">
+
+            <div class="product-card">
+                <img src="shoe 1.png">
+                <h3>Running Shoe</h3>
+                <p>₹3499</p>
+            </div>
+
+            <div class="product-card">
+                <img src="shoe 2.png">
+                <h3>Walking Shoe</h3>
+                <p>₹2650</p>
+            </div>
+
+            <div class="product-card">
+                <img src="shoe 3.png">
+                <h3>Gym Shoe</h3>
+                <p>₹3190</p>
+            </div>
+
+            <div class="product-card">
+                <img src="shoe 4.png">
+                <h3>Sports Shoe</h3>
+                <p>₹2890</p>
+            </div>
+
+        </div>`;
+    }
+
+    else if(category === "Shorts"){
+        data = `
+        <h1 class="product-heading">Shorts Collection</h1>
+
+        <div class="product-box">
+
+            <div class="product-card">
+                <img src="short 1.png">
+                <h3>Sports Shorts</h3>
+                <p>₹670</p>
+            </div>
+
+            <div class="product-card">
+                <img src="short 2.png">
+                <h3>Running Shorts</h3>
+                <p>₹740</p>
+            </div>
+
+            <div class="product-card">
+                <img src="short 3.png">
+                <h3>Gym Shorts</h3>
+                <p>₹820</p>
+            </div>
+
+            <div class="product-card">
+                <img src="short 4.png">
+                <h3>Cotton Shorts</h3>
+                <p>₹590</p>
+            </div>
+
+        </div>`;
+    }
+
+    else if(category === "Towels"){
+        data = `
+        <h1 class="product-heading">Towels Collection</h1>
+
+        <div class="product-box">
+
+            <div class="product-card">
+                <img src="towel 1.png">
+                <h3>Sports Towel</h3>
+                <p>₹390</p>
+            </div>
+
+            <div class="product-card">
+                <img src="towel 2.png">
+                <h3>Large Towel</h3>
+                <p>₹640</p>
+            </div>
+
+            <div class="product-card">
+                <img src="towel 3.png">
+                <h3>Gym Towel</h3>
+                <p>₹420</p>
+            </div>
+
+            <div class="product-card">
+                <img src="towel 4.png">
+                <h3>Cotton Towel</h3>
+                <p>₹510</p>
+            </div>
+
+        </div>`;
+    }
+
+    document.getElementById("display-products").innerHTML = data;
+}
+
+</script>
+
+    <!-- Bottom Cards -->
+    <div class="row-container">
+
+        <div class="block item-dark">
+            <div class="block-text">
+                <h3>Gym Equipments & Accessories</h3>
+                <p>₹299 <span>Onwards</span></p>
+            </div>
+
+            <img src="gym equipment.png">
+        </div>
+
+        <div class="block item-light">
+            <div class="block-text">
+                <h3>Massagers & Rollers</h3>
+                <p>₹199 <span>Onwards</span></p>
+            </div>
+
+            <img src="massage.png">
+        </div>
+
+        <div class="block item-dark">
+            <div class="block-text">
+                <h3>Sports Nutrition</h3>
+                <p>₹59 <span>Onwards</span></p>
+            </div>
+
+            <img src="nutrition.png">
+        </div>
+
+        <div class="block item-dark">
+            <div class="block-text">
+                <h3>Supports & Straps</h3>
+                <p>₹199 <span>Onwards</span></p>
+            </div>
+
+            <img src="support.png">
+        </div>
+
+    </div>
+
+</body>
+</html>
